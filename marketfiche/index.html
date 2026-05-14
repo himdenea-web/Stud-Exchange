@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stud'Exchange | Marketplace Étudiante</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-bg"></div>
+    
+    <div class="app-container">
+        <header class="main-header">
+            <div class="logo">🎓 <span>Stud'Exchange</span></div>
+            <h1>Réussis tes exams avec les meilleures fiches.</h1>
+            <p>Paiement sécurisé via <strong>Wero</strong></p>
+        </header>
+
+        <nav class="filter-bar">
+            <button class="filter-btn active" onclick="filterCategory('all')">Tous</button>
+            <button class="filter-btn" onclick="filterCategory('info')">💻 Info</button>
+            <button class="filter-btn" onclick="filterCategory('droit')">⚖️ Droit</button>
+            <button class="filter-btn" onclick="filterCategory('eco')">📈 Éco</button>
+        </nav>
+
+        <section id="catalog" class="grid-container">
+            </section>
+
+        <footer class="seller-card">
+            <div class="seller-content">
+                <h3>Tu as des fiches ?</h3>
+                <p>Transforme tes notes en cash dès maintenant.</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZKw430aGDzUyF36qUK0bN3iAbDPPUJBdFR2H-vgO5B5h7BA/viewform?usp=header" target="_blank" class="btn-sell">Vendre mes fiches 🚀</a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
