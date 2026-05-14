@@ -1,16 +1,11 @@
-// ==========================================
-// 1. TES INFORMATIONS (ADMIN)
-// ==========================================
+
 const INFOS_ADMIN = {
     nom: "Himdene",
     email: "himdenea@gmail.com",
     wero: "06 10 96 64 24"
 };
 
-// ==========================================
-// 2. TA BASE DE DONNÉES MANUELLE
-// ==========================================
-// Pour ajouter un vendeur, copie un bloc { ... } et change les infos
+
 const catalogueFiches = [
     {
         id: 1,
@@ -18,7 +13,7 @@ const catalogueFiches = [
         vendeur: "Thomas",
         prix: "4.99",
         categorie: "info",
-        lienApercu: "https://drive.google.com/..." // Remplace par ton lien Drive
+        lienApercu: "https://drive.google.com/..." 
     },
     {
         id: 2,
@@ -38,15 +33,13 @@ const catalogueFiches = [
     }
 ];
 
-// ==========================================
-// 3. FONCTIONS D'AFFICHAGE
-// ==========================================
+
 
 function afficherFiches() {
     const container = document.getElementById('catalog');
     if (!container) return;
     
-    container.innerHTML = ""; // On vide avant d'afficher
+    container.innerHTML = ""; 
 
     catalogueFiches.forEach(fiche => {
         container.innerHTML += `
@@ -64,12 +57,10 @@ function afficherFiches() {
     });
 }
 
-// ==========================================
-// 4. GESTION DE LA COMMANDE
-// ==========================================
+
 
 function commander(nomFiche, prix) {
-    // Préparation des textes pour le mail
+
     const sujet = encodeURIComponent(`Commande Stud'Exchange : ${nomFiche}`);
     const corps = encodeURIComponent(
         `Bonjour ${INFOS_ADMIN.nom},\n\n` +
@@ -78,20 +69,18 @@ function commander(nomFiche, prix) {
         `Merci de m'envoyer le fichier sur cet email !`
     );
     
-    // Alerte pour guider l'utilisateur
+    
     alert(
         `🚀 ÉTAPE FINALE :\n\n` +
         `1. Envoie ${prix}€ au ${INFOS_ADMIN.wero} via Wero.\n` +
         `2. Clique sur OK pour ouvrir ton mail et envoyer la preuve.`
     );
     
-    // Ouverture du logiciel de mail (Gmail, Outlook...)
+    
     window.location.href = `mailto:${INFOS_ADMIN.email}?subject=${sujet}&body=${corps}`;
 }
 
-// ==========================================
-// 5. SYSTÈME DE FILTRES
-// ==========================================
+
 
 function filterCategory(cat) {
     const cards = document.querySelectorAll('.product-card');
@@ -104,13 +93,13 @@ function filterCategory(cat) {
         }
     });
     
-    // Gérer l'apparence des boutons de filtre
+    
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.remove('active');
     });
-    // On ajoute 'active' au bouton cliqué
+    
     event.target.classList.add('active');
 }
 
-// Lancement automatique au chargement de la page
+
 window.onload = afficherFiches;
