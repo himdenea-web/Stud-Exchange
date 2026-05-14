@@ -40,7 +40,7 @@ body {
 .logo span { opacity: 0.9; }
 h1 { font-size: 2.2rem; margin: 10px 0; letter-spacing: -1px; }
 
-/* Filtres */
+
 .filter-bar {
     display: flex;
     justify-content: center;
@@ -68,7 +68,7 @@ h1 { font-size: 2.2rem; margin: 10px 0; letter-spacing: -1px; }
     transform: translateY(-2px);
 }
 
-/* Grille de Produits */
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -126,7 +126,7 @@ h4 { font-size: 1.2rem; margin: 15px 0 5px 0; color: #0f172a; }
     box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.39);
 }
 
-/* Footer Vendeur */
+
 .seller-card {
     margin-top: 60px;
     background: linear-gradient(90deg, #1e293b, #334155);
